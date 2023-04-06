@@ -7,7 +7,7 @@ const Footer = () => {
             background: '#C0C0C0',
             padding: '76px'
         }}>
-            <h3>footer</h3>
+            <h3>Footer</h3>
         </Box>
     )
 }

@@ -4,7 +4,7 @@ import Box from '@mui/material/Box'
 const Header = () => {
     return (
         <Box component='header'>
-            <h3>Logo</h3>
+            <h3>Litoral Eventos / Header</h3>
         </Box>
     )
 }

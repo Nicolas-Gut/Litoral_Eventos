@@ -5,7 +5,6 @@ const MainMenu = () => {
     return (
         <Box component='nav' sx={styles.nav}>
             <ul style={styles.ulMenu}>Main Menu</ul>
-            <Button variant="contained">Contained</Button>
         </Box>
     )
 }

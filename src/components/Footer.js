@@ -6,7 +6,7 @@ const Footer = () => {
         <Box component='footer'
          sx={{
             background: '#C0C0C0',
-            padding: '76px'
+            padding: '120px'
         }}>
         <p>IMG//LOGO </p>
         <p>© Copyright 2023 LitoralEventos | Todos os Direitos Reservados</p>

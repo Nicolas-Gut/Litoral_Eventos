@@ -60,7 +60,7 @@ const Users = () => {
       <Box sx={{
         display: 'flex',
       }}>
-        <Sidebar />
+        
         <Content title="Users">
             <button onClick={() => setModalOpen(true)}>Cadastrar User</button>
             {users && 
@@ -88,10 +88,10 @@ const Users = () => {
                 zIndex: 9
                 }}>
                   <Box sx={{
-                    width: '500px',
-                    height: '300px',
+                    width: '600px',
+                    height: '400px',
                     background: '#FFF',
-                    borderRadius: '10px',
+                    borderRadius: '4px',
                     padding: '20px',
                   }}>
                     <h1>Cadastrar User</h1>

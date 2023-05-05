@@ -8,9 +8,25 @@ header h1{
     margin: 0;
 }
 
+header div{
+    color: #FFF;
+    margin: 0px;
+    display: flex;
+    justify-content: end;
+}
+
 header a{
     color: #FFF;
-    display: flex;
-    justify-content: right;
-    margin: 0px;
 }
+header button{
+    background-color: #004580;
+    color: #FFF;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover{
+    background-color: #00223f;
+}
+

@@ -6,8 +6,11 @@ const Header = () => {
     return (
         <Box component='header'>
             <h1>logo litoral</h1>
-            <a href='/users'>Seja Um Produtor</a>
-            <button >Acessar Conta</button>
+            <div>
+                <a href='/users'>Seja Um Produtor</a>
+                <button >Acessar Conta</button>
+            </div>
+            
         </Box>
     )
 }

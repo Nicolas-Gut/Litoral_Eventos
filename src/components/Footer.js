@@ -11,9 +11,9 @@ const Footer = () => {
         <p>IMG//LOGO </p>
         <p>© Copyright 2023 LitoralEventos | Todos os Direitos Reservados</p>
         
-            <a href='https://www.sympla.com.br'> Home</a>
-            <a href='https://www.sympla.com.br'> Sobre</a>
-            <a href='https://www.sympla.com.br'>Termos e Políticas</a>
+            <a href='/'> Home</a>
+            <a href='/quem-somos'> Sobre</a>
+            <a href='*'>Termos e Políticas</a>
         </Box>
     )
 }

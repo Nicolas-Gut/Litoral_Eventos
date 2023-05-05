@@ -3,7 +3,14 @@ header {
     padding: 20px;
 }
 
-header h3{
+header h1{
     color: #FFF;
     margin: 0;
+}
+
+header a{
+    color: #FFF;
+    display: flex;
+    justify-content: right;
+    margin: 0px;
 }

@@ -30,3 +30,9 @@ header button:hover{
     background-color: #00223f;
 }
 
+header img{
+    width:  190px;
+    height: 35px;
+    margin: 0px 12px 0px 24px;
+    flex-wrap: wrap;
+}

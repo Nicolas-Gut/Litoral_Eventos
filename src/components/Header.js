@@ -1,9 +1,11 @@
 import './Header.css'
 import Box from '@mui/material/Box'
-import {FaReact as IconReact} from 'react-icons/fa'
+// import {FaReact as IconReact} from 'react-icons/fa'
 import MainMenu from './MainMenu'
 import useAuthStore from '../store/authStore'
 import { useState } from 'react'
+
+import logo from './assets/img/logo1.png'
 
 const Header = () => {
 
@@ -77,8 +79,7 @@ const Header = () => {
     return (
         <Box component='header' sx={{display: 'flex', alignItems: 'center'}}>
             <Box sx={styles.stack}>
-                <IconReact style={styles.logo} />
-                <h3>Logo</h3>
+            <img src={logo} alt="Slide 1" />
             </Box>
             <MainMenu />
             <div style={{margin: '0 0 0 20px', color: '#FFF' }}>

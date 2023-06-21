@@ -4,6 +4,7 @@ import Header from '../components/Header'
 // import Sidebar from '../components/Sidebar'
 import Content from '../components/Content'
 import Footer from '../components/Footer'
+import Carousel from '../components/Carousel'
 
 
 const Home = () => {
@@ -11,6 +12,8 @@ const Home = () => {
     <>
       <Header />
       
+      <Carousel />
+
       <Box sx={{
         display: 'flex',
       }}>

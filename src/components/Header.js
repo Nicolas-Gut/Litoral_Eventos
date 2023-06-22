@@ -4,8 +4,9 @@ import Box from '@mui/material/Box'
 import MainMenu from './MainMenu'
 import useAuthStore from '../store/authStore'
 import { useState } from 'react'
+import { API_SERVER } from '../config'
 
-import logo from './assets/img/logo1.png'
+import logo from '../components/assets/img/logo2.png'
 
 const Header = () => {
 
@@ -25,7 +26,7 @@ const Header = () => {
         const pass = event.target.pass.value
         const user = {email, pass}
         try {
-          const response = await fetch('http://localhost:3100/auth/login',
+          const response = await fetch(`${API_SERVER}/login`,
           {
             method: 'POST',
             headers: {
@@ -53,7 +54,7 @@ const Header = () => {
 
       const handleLogout = async () => {
         try {
-          const response = await fetch('http://localhost:3100/auth/logout',
+          const response = await fetch(`${API_SERVER}/logout`,
           {
             method: 'POST',
             headers: {

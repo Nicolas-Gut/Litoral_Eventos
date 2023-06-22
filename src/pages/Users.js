@@ -5,6 +5,7 @@ import Content from '../components/Content'
 import Footer from '../components/Footer'
 import { useEffect, useState } from 'react'
 import CardUser from '../components/CardUser'
+import { API_SERVER } from '../config'
 
 const Users = () => {
 
@@ -13,7 +14,7 @@ const Users = () => {
 
   const loadUsers = async () => {
     try {
-      const response = await fetch('http://localhost:3100/user')
+      const response = await fetch()
       const data = await response.json()
       setUsers(data)
       console.log(data)
@@ -37,7 +38,7 @@ const Users = () => {
     const user = {name, email, pass, avatar}
     console.log(user)
     try {
-      const response = await fetch('http://localhost:3100/user',
+      const response = await fetch(`${API_SERVER}/user`,
       {
         method: 'POST',
         headers: {

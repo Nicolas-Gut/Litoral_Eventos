@@ -4,29 +4,29 @@ import Content from '../components/Content'
 import Videos from '../components/Videos'
 // import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
-import { useEffect, useState } from 'react'
-import CardUser from '../components/CardUser'
+import { useState } from 'react'
+
 import { API_SERVER } from '../config'
 
 const Users = () => {
   
-  const [users, setUsers] = useState(false)
+  // const [users, setUsers] = useState(false)
   const [modalOpen, setModalOpen] = useState(false) 
 
-  const loadUsers = async () => {
-    try {
-      const response = await fetch()
-      const data = await response.json()
-      setUsers(data)
-      console.log(data)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+  // const loadUsers = async () => {
+  //   try {
+  //     const response = await fetch()
+  //     const data = await response.json()
+  //     setUsers(data)
+  //     console.log(data)
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
-  useEffect(() => {
-    loadUsers()
-  }, []) // [] = executa apenas uma vez quando o componente é montado
+  // useEffect(() => {
+  //   loadUsers()
+  // }, []) // [] = executa apenas uma vez quando o componente é montado
 
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -50,7 +50,7 @@ const Users = () => {
       const data = await response.json()
       console.log(data)
       setModalOpen(false)
-      loadUsers()
+      
     } catch (error) {
       console.log(error)
     }
@@ -68,11 +68,7 @@ const Users = () => {
 
         <Content title="Users">
             <button onClick={() => setModalOpen(true)}>Cadastrar User</button>
-            {users && 
-              users.map(user => (
-                <CardUser key={user.id} user={user} />
-              ))
-            }
+            
         </Content>
       </Box>
       {modalOpen && 

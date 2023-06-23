@@ -26,7 +26,7 @@ const Header = () => {
         const pass = event.target.pass.value
         const user = {email, pass}
         try {
-          const response = await fetch(`${API_SERVER}/login`,
+          const response = await fetch(`${API_SERVER}/auth/login`,
           {
             method: 'POST',
             headers: {
@@ -54,7 +54,7 @@ const Header = () => {
 
       const handleLogout = async () => {
         try {
-          const response = await fetch(`${API_SERVER}/logout`,
+          const response = await fetch(`${API_SERVER}/auth/logout`,
           {
             method: 'POST',
             headers: {

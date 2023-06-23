@@ -3,7 +3,7 @@ import Box from '@mui/material/Box'
 
 const Sidebar = () => {
     return(
-        <Box component='sidebar'
+        <Box
         sx={{
             background: "#DDD",
             width: 200,

@@ -1,9 +1,9 @@
 import './Carousel.css'
 import { Carousel } from 'react-responsive-carousel'; 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-import foto1 from './assets/img/I1.jpg'
-import foto2 from './assets/img/I2.jpg'
-import foto3 from './assets/img/I3.jpg'
+import foto1 from './assets/img/S1.jpg'
+import foto2 from './assets/img/S2.jpeg'
+import foto3 from './assets/img/S3.jpeg'
 import foto4 from './assets/img/I4.jpg'
 import foto5 from './assets/img/I5.jpg'
 
@@ -13,15 +13,15 @@ const App = () => {
         <Carousel autoPlay={true} interval={2000}>
           <div>
             <img src={foto1} alt="Slide 1" />
-            <p className="legend">Slide Teste1</p>
+            <p className="legend">Numanice</p>
           </div>
           <div>
             <img src={foto2} alt="Slide 2" />
-            <p className="legend">Slide Teste2</p>
+            <p className="legend">Tiago Iorc</p>
           </div>
           <div>
             <img src={foto3} alt="Slide 3" />
-            <p className="legend">Slide Teste3</p>
+            <p className="legend">Festival AFROPUNK Bahia 2023</p>
           </div>
           <div>
             <img src={foto4} alt="Slide 4" />

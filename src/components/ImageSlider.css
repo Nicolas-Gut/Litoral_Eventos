@@ -1,0 +1,34 @@
+.slider-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+  
+  .slick-slide {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .circular-image {
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    object-fit:cover;
+    margin: 0 10px; /* Espaçamento entre as imagens (ajuste conforme necessário) */
+  }
+  
+  .slick-dots {
+    bottom: 10px;
+  }
+  
+  .slick-dots li button:before {
+    color: #fff;
+  }
+  
+  .slick-dots li.slick-active button:before {
+    color: #000;
+  }
+
+  .slider-item {
+    display: inline-block;
+  }
+  

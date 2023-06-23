@@ -1,6 +1,7 @@
 import Box from '@mui/material/Box'
 import Header from '../components/Header'
 import Content from '../components/Content'
+import Videos from '../components/Videos'
 // import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
 import { useEffect, useState } from 'react'
@@ -8,7 +9,7 @@ import CardUser from '../components/CardUser'
 import { API_SERVER } from '../config'
 
 const Users = () => {
-
+  
   const [users, setUsers] = useState(false)
   const [modalOpen, setModalOpen] = useState(false) 
 
@@ -57,11 +58,14 @@ const Users = () => {
 
   return (
     <>
-      <Header />
+    <Header />
+    
+     <Videos />
+     
       <Box sx={{
         display: 'flex',
       }}>
-        
+
         <Content title="Users">
             <button onClick={() => setModalOpen(true)}>Cadastrar User</button>
             {users && 

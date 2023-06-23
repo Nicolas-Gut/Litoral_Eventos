@@ -7,7 +7,7 @@ const MainMenu = () => {
             <ul style={styles.ulMenu}>
                 <li><NavLink to='/'>Home</NavLink></li>
                 <li><NavLink to='/quem-somos'>Quem Somos</NavLink></li>
-                <li><NavLink to='/users'>Users</NavLink></li>
+                <li><NavLink to='/users'>Seja um Produtor</NavLink></li>
                 <li><NavLink to='/contato'>Contato</NavLink></li>
             </ul>
         </Box>
@@ -19,7 +19,7 @@ const styles = {
         color: '#FFF',
         margin: '0 0 0 auto',
         '& ul li a': {
-            color: '#FFF',
+            color: '#004580',
             textDecoration: 'none',
             padding: '0 5px 8px 5px',
             '&:hover': {

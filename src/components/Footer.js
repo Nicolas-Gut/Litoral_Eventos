@@ -1,5 +1,6 @@
 import './Footer.css'
 import Box from '@mui/material/Box'
+import Logo from './assets/img/logo2.png'
 
 const Footer = () => {
     return (
@@ -8,7 +9,7 @@ const Footer = () => {
             background: '#C0C0C0',
             padding: '120px'
         }}>
-        <p>IMG//LOGO </p>
+        <img src={Logo} style={{width: '15%'}} />
         <p>© Copyright 2023 LitoralEventos | Todos os Direitos Reservados</p>
         
             <a href='/'> Home</a>

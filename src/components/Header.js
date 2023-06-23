@@ -6,7 +6,7 @@ import useAuthStore from '../store/authStore'
 import { useState } from 'react'
 import { API_SERVER } from '../config'
 
-import logo from '../components/assets/img/logo2.png'
+import logo from '../components/assets/img/download.png'
 
 const Header = () => {
 

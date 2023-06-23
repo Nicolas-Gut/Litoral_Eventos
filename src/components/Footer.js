@@ -9,7 +9,7 @@ const Footer = () => {
             background: '#C0C0C0',
             padding: '120px'
         }}>
-        <img src={Logo} style={{width: '15%'}} />
+        <img src={Logo} alt='logo Litoral Eventos' style={{width: '15%'}} />
         <p>© Copyright 2023 LitoralEventos | Todos os Direitos Reservados</p>
         
             <a href='/'> Home</a>

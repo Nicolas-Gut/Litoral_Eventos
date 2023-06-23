@@ -48,7 +48,9 @@ const Users = () => {
         body: JSON.stringify(user), 
       })
       const data = await response.json()
-      console.log(data)
+      if(response.status === 500 && data?.message){
+        alert(data.message)
+      }
       setModalOpen(false)
       
     } catch (error) {

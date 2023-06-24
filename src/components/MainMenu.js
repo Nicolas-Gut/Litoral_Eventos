@@ -5,10 +5,7 @@ const MainMenu = () => {
     return (
         <Box component="nav" sx={styles.nav}>
             <ul style={styles.ulMenu}>
-                <li><NavLink to='/'>Home</NavLink></li>
-                <li><NavLink to='/quem-somos'>Quem Somos</NavLink></li>
-                <li><NavLink to='/users'>Seja um Produtor</NavLink></li>
-                <li><NavLink to='/contato'>Contato</NavLink></li>
+                <li style={styles.li}><NavLink to='/users'>Seja um Produtor</NavLink></li>
             </ul>
         </Box>
     )
@@ -16,7 +13,7 @@ const MainMenu = () => {
 
 const styles = {
     nav: {
-        color: '#FFF',
+        color: '#DDD',
         margin: '0 0 0 auto',
         '& ul li a': {
             color: '#004580',
@@ -24,7 +21,7 @@ const styles = {
             padding: '0 5px 8px 5px',
             '&:hover': {
                 color: '#DDD',
-                borderBottom: '3px solid #f0c14b',
+                borderBottom: '3px solid #058789',
             }
         }
     },
@@ -36,6 +33,9 @@ const styles = {
         listStyleType: 'none',
         padding: '0',
         margin: '0'
+    },
+    li: {
+        padding: '0px 5px 7px 12px'
     }
 }
 

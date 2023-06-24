@@ -1,12 +1,14 @@
 import './Header.css'
 import Box from '@mui/material/Box'
-// import {FaReact as IconReact} from 'react-icons/fa'
+import { Link } from 'react-router-dom'; // Importe a função Link para criar links internos
+
 import MainMenu from './MainMenu'
 import useAuthStore from '../store/authStore'
 import { useState } from 'react'
 import { API_SERVER } from '../config'
-
-import logo from '../components/assets/img/download.png'
+// eslint-disable-next-line
+// import Home from '../pages/Home.js'
+import logo from '../components/assets/img/Litoral_EventosO.png'
 
 const Header = () => {
 
@@ -80,7 +82,9 @@ const Header = () => {
     return (
         <Box component='header' sx={{display: 'flex', alignItems: 'center'}}>
             <Box sx={styles.stack}>
-            <img src={logo} alt="Slide 1" />
+            <Link to="http://localhost:3000/">
+              <img src={logo} alt="Slide 1" />
+            </Link>
             </Box>
             <MainMenu />
             <div style={{margin: '0 0 0 20px', color: '#FFF' }}>

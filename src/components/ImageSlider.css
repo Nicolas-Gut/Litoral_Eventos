@@ -10,25 +10,32 @@
   
   .circular-image {
     border-radius: 50%;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     object-fit:cover;
-    margin: 0 10px; /* Espaçamento entre as imagens (ajuste conforme necessário) */
+    /* margin: 0 10px; */
   }
   
   .slick-dots {
     bottom: 10px;
   }
   
-  .slick-dots li button:before {
-    color: #fff;
+  /* .slick-dots li button:before {
+    color: #865a5a;
   }
   
   .slick-dots li.slick-active button:before {
-    color: #000;
-  }
+    color: #ac0000;
+  } */
 
-  .slider-item {
-    display: inline-block;
+
+  /* .slider-item {
+    display: flex;
+    justify-content: center;
+  } */
+  
+  .slide-item-container {
+    margin: 0 10px; /* Ajuste as margens conforme necessário */
   }
+  
   

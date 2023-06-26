@@ -1,41 +1,45 @@
 import React from 'react';
-import Slider from 'react-slick';
-import './ImageSlider.css'; // Arquivo CSS personalizado para estilização
+import {useState, useEffect, useRef} from 'react'
+import './ImageSlider.css'
+import { motion } from 'framer-motion'
+
 import I1 from './assets/img/I5.jpg';
-import I2 from './assets/img/I2.jpg';
-import I3 from './assets/img/I1.jpg';
+import I2 from './assets/img/I1.jpg';
+import I3 from './assets/img/I5.jpg';
 
-const ImageSlider = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3, // Exibir 3 imagens por vez (ajuste conforme necessário)
-    slidesToScroll: 1,
-    variableWidth: true
-  };
+const images = [I1, I2, I3, I2, I3]
 
-  return (
-      <div className="slider-container">
-        <Slider {...settings}>
-          <div >
-            <div className="slide-item-container">
-              <img src={I1} alt="Imagem 1" className="circular-image" />
-            </div>
-          </div>
-          <div className="slider-item">
-            <div className="slide-item-container">
-              <img src={I2} alt="Imagem 2" className="circular-image" />
-            </div>
-          </div>
-          <div className="slider-item">
-            <div className="slide-item-container">
-              <img src={I3} alt="Imagem 3" className="circular-image" />
-            </div>
-          </div>
-          {/* Adicione mais imagens conforme necessário */}
-        </Slider>
-      </div>
+function ImageSlider() {
+  const carousel = useRef();
+  const [width, setWidth] = useState(0)
+
+  useEffect(() => {
+    console.log(carousel.current?.scrollWidth, carousel.current?.offsetWidth)
+    setWidth(carousel.current?.scrollWidth - carousel.current?.offsetWidth)
+  }, [])
+
+
+  return (    
+    <div className='imageSlider'>
+      <motion.div ref={carousel} className='carousel' whileTap={{ cursor: "grabbing" }}>
+        <motion.div className='inner'
+        drag="x"
+        dragConstraints={{ right: 0, left: -width}}
+        initial={{ x: 100}}
+        animate= {{ x: 0}}
+        transition={{ duration: 0.8}}
+        >
+
+          {images.map(image =>(
+            <motion.div className='item' key={image}>
+              <img src={image} alt="Texto alt" />
+              <p style={{display: 'flex', alignItems: 'center'}}>teste</p>
+            </motion.div> 
+          ))}
+
+        </motion.div>
+      </motion.div>
+    </div>
     );
     
 };

@@ -1,11 +1,14 @@
 import Box from '@mui/material/Box'
 import Header from '../components/Header'
 // import Content from '../components/Content'
-import Videos from '../components/Videos'
+// import Videos from '../components/Videos'
 import Footer from '../components/Footer'
 import { useState } from 'react'
 import './User.css'
 import { API_SERVER } from '../config'
+
+import imageB from '../components/assets/img/imageB.png';
+
 
 
 const Users = () => { 
@@ -60,17 +63,35 @@ const Users = () => {
     <>
       <Header />
 
-      {/* <Box sx={{ display: 'flex' }}>
-        <Content title="Users" />
-      </Box> */}
-
-      <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          backgroundImage: `url(${imageB})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '774px', // Adjust the desired height for the background image
+          justifyContent: 'center',
+          alignItems: 'center',
+          flexDirection: 'column',
+          gap: '10px',
+          padding: '20px',
+        }}
+      >
+        {/* <img src={imageB} alt="image" /> */}
+        <h1 style={{color: '#fff'}}>Produza eventos e conteúdos.</h1>
+        <p style={{color: '#fff'}}>Junte-se à maior plataforma do lITORAL para criar diferentes jeitos de viver, com soluções completa gestão, venda e entrega das suas produções</p>
         <button className="btn-cadastrar" onClick={() => setModalOpen(true)}>
           Cadastrar User
         </button>
       </Box>
 
-      <Videos />
+      {/* <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
+        <button className="btn-cadastrar" onClick={() => setModalOpen(true)}>
+          Cadastrar User
+        </button>
+      </Box> */}
+
+      {/* <Videos /> */}
 
       {modalOpen && (
         <Box

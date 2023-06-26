@@ -13,7 +13,6 @@ const Footer = () => {
         <p>© Copyright 2023 LitoralEventos | Todos os Direitos Reservados</p>
         
             <a href='/'> Home</a>
-            <a href='/quem-somos'> Sobre</a>
             <a href='*'>Termos e Políticas</a>
         </Box>
     )

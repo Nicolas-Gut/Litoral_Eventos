@@ -9,6 +9,7 @@ import { API_SERVER } from '../config'
 // eslint-disable-next-line
 // import Home from '../pages/Home.js'
 import logo from '../components/assets/img/Litoral_EventosO.png'
+import modalImage from '../components/assets/img/imgM.png'
 
 const Header = () => {
 
@@ -82,16 +83,19 @@ const Header = () => {
     return (
         <Box component='header' sx={{display: 'flex', alignItems: 'center'}}>
             <Box sx={styles.stack}>
-            <Link to="http://localhost:3000/">
-              <img src={logo} alt="Slide 1" />
-            </Link>
+              <Link to="http://localhost:3000/">
+                <img src={logo} alt="Slide 1" />
+              </Link>
             </Box>
+            
             <MainMenu />
+
             <div style={{margin: '0 0 0 20px', color: '#FFF' }}>
                 {isLogged ? (
                     <img onClick={() => handleLogout()} style={styles.avatar} src={avatarUserLogged} alt={nameUserLogged} />
                 ) : (<button onClick={() => setModalOpen(true)}>Logar</button>) }
             </div>
+            
             {modalOpen && 
               <Box className="bgModal" onClick={(event) => {
                 if(event.target.className.includes('bgModal')) {
@@ -116,8 +120,13 @@ const Header = () => {
                     borderRadius: '10px',
                     padding: '20px',
                   }}>
-                    <h1>Logar</h1>
-                    <form onSubmit={handleSubmit}>
+
+                    <Box sx={{display: 'flex', alignItems: 'center'}}>
+                      <img src={modalImage} alt='imagem/modal' className="modal-image" />
+                    </Box>
+
+                    <form className='modal-form' onSubmit={handleSubmit}>
+                      <h1 className='modal-title' style={{ color: 'black', marginBottom: '10px' }}>Login</h1>
                       <input type="text" name="email" placeholder="Email" /><br />
                       <input type="password" name="pass" placeholder="Senha" /><br />
                       <br />
@@ -126,7 +135,7 @@ const Header = () => {
                   </Box> 
               </Box>
             }
-        </Box>
+      </Box>
     )
 }
 

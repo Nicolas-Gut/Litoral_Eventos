@@ -1,15 +1,14 @@
 import Box from '@mui/material/Box'
 import Header from '../components/Header'
-import Content from '../components/Content'
+// import Content from '../components/Content'
 import Videos from '../components/Videos'
-// import Sidebar from '../components/Sidebar'
 import Footer from '../components/Footer'
 import { useState } from 'react'
-
+import './User.css'
 import { API_SERVER } from '../config'
 
-const Users = () => {
-  
+
+const Users = () => { 
   // const [users, setUsers] = useState(false)
   const [modalOpen, setModalOpen] = useState(false) 
 
@@ -51,8 +50,7 @@ const Users = () => {
       if(response.status === 500 && data?.message){
         alert(data.message)
       }
-      setModalOpen(false)
-      
+      setModalOpen(false)  
     } catch (error) {
       console.log(error)
     }
@@ -60,59 +58,50 @@ const Users = () => {
 
   return (
     <>
-    <Header />
-    
-     <Videos />
-     
-      <Box sx={{
-        display: 'flex',
-      }}>
+      <Header />
 
-        <Content title="Users">
-            <button onClick={() => setModalOpen(true)}>Cadastrar User</button>
-            
-        </Content>
+      {/* <Box sx={{ display: 'flex' }}>
+        <Content title="Users" />
+      </Box> */}
+
+      <Box sx={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
+        <button className="btn-cadastrar" onClick={() => setModalOpen(true)}>
+          Cadastrar User
+        </button>
       </Box>
-      {modalOpen && 
-              <Box className="bgModal" onClick={(event) => {
-                if(event.target.className.includes('bgModal')) {
-                  setModalOpen(false)
-                }
-              }} sx={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                right: 0,
-                bottom: 0,
-                background: '#000000A0',
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 9
-                }}>
-                  <Box sx={{
-                    width: '600px',
-                    height: '400px',
-                    background: '#FFF',
-                    borderRadius: '4px',
-                    padding: '20px',
-                  }}>
-                    <h1>Cadastrar User</h1>
-                    <form onSubmit={handleSubmit}>
-                      <input type="text" name="name" placeholder="Nome" /><br />
-                      <input type="text" name="email" placeholder="Email" /><br />
-                      <input type="password" name="pass" placeholder="Senha" /><br />
-                      <input type="text" name="avatar" placeholder="Avatar" /><br />
-                      <br />
-                      <button type="submit">Cadastrar</button>
-                    </form>
-                  </Box> 
-              </Box>
+
+      <Videos />
+
+      {modalOpen && (
+        <Box
+          className="modal-container"
+          onClick={(event) => {
+            if (event.target.className.includes('modal-container')) {
+              setModalOpen(false);
             }
-      
+          }}
+        >
+          <Box className="modal-content">
+            <h1 className="modal-title">Cadastrar User</h1>
+            <form className="modal-form" onSubmit={handleSubmit}>
+              <input type="text" name="name" placeholder="Nome" />
+              <br />
+              <input type="text" name="email" placeholder="Email" />
+              <br />
+              <input type="password" name="pass" placeholder="Senha" />
+              <br />
+              <input type="text" name="avatar" placeholder="Avatar" />
+              <br />
+              <br />
+              <button type="submit">Cadastrar</button>
+            </form>
+          </Box>
+        </Box>
+      )}
+
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Users
+export default Users;

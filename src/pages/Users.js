@@ -8,6 +8,7 @@ import './User.css'
 import { API_SERVER } from '../config'
 
 import imageB from '../components/assets/img/imageB.png';
+import modalImage1 from '../components/assets/img/imgM2.png'
 
 
 
@@ -102,20 +103,27 @@ const Users = () => {
             }
           }}
         >
+
           <Box className="modal-content">
-            <h1 className="modal-title">Cadastrar User</h1>
-            <form className="modal-form" onSubmit={handleSubmit}>
-              <input type="text" name="name" placeholder="Nome" />
-              <br />
-              <input type="text" name="email" placeholder="Email" />
-              <br />
-              <input type="password" name="pass" placeholder="Senha" />
-              <br />
-              <input type="text" name="avatar" placeholder="Avatar" />
-              <br />
-              <br />
-              <button type="submit">Cadastrar</button>
-            </form>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+              <img src={modalImage1} alt="imagem/modal" className="modal-image" />
+              <div>
+                <h1 className="modal-title">Cadastrar User</h1>
+
+                <form className="modal-form" onSubmit={handleSubmit}>
+                  <input type="text" name="name" placeholder="Nome" />
+                  <br />
+                  <input type="text" name="email" placeholder="Email" />
+                  <br />
+                  <input type="password" name="pass" placeholder="Senha" />
+                  <br />
+                  <input type="text" name="avatar" placeholder="Avatar" />
+                  <br />
+                  <br />
+                  <button type="submit">Cadastrar</button>
+                </form>
+              </div>
+            </Box>
           </Box>
         </Box>
       )}

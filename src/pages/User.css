@@ -12,9 +12,9 @@
   }
   
   .modal-content {
-    width: 500px;
+    width: 560px;
     max-width: 90%;
-    height: 300px;
+    height: 345px;
     background: #fff;
     border-radius: 10px;
     padding: 20px;
@@ -24,6 +24,14 @@
     align-items: center;
   }
 
+  .modal-image {
+    width: 100%;
+    height: auto;
+    max-height: 260px;  /* Define uma altura máxima para a imagem */
+    object-fit: cover;  /* Redimensiona a imagem para preencher o espaço */
+    border-radius: 10px;  /* Adiciona um canto arredondado à imagem */
+    margin: 15px 50px 15px auto;
+  }
 
  .modal-title {
     font-size: 24px;

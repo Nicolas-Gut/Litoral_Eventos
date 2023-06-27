@@ -93,7 +93,7 @@ const Header = () => {
             <div style={{margin: '0 0 0 20px', color: '#FFF' }}>
                 {isLogged ? (
                     <img onClick={() => handleLogout()} style={styles.avatar} src={avatarUserLogged} alt={nameUserLogged} />
-                ) : (<button onClick={() => setModalOpen(true)}>Logar</button>) }
+                ) : (<button  onClick={() => setModalOpen(true)}>Logar</button>) }
             </div>
             
             {modalOpen && 
@@ -130,7 +130,7 @@ const Header = () => {
                       <input type="text" name="email" placeholder="Email" /><br />
                       <input type="password" name="pass" placeholder="Senha" /><br />
                       <br />
-                      <button type="submit">Logar</button>
+                      <button className="login-button" style={styles.loginButton} type="submit">Logar</button>
                     </form>
                   </Box> 
               </Box>
@@ -156,7 +156,17 @@ const styles = {
         width: '40px',
         borderRadius: '50%',
         cursor: 'pointer'
-    }
+    },
+    loginButton: {
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        width: '100px',
+        height: '30px',
+        margin: '0 auto',
+      },
+    
 }
 
 export default Header
+

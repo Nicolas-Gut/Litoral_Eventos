@@ -55,30 +55,30 @@ const Header = () => {
         }
       }
 
-      const handleLogout = async () => {
-        try {
-          const response = await fetch(`${API_SERVER}/auth/logout`,
-          {
-            method: 'POST',
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({email: emailUserLogged, token: tokenUserLogged}), 
-          })
-          const data = await response.json()
-          console.log(data)
-          if(response.status === 200) {
-            logout()
-            localStorage.removeItem('token')
-            localStorage.removeItem('user')
-          } else{
-            alert(data.message)
-          }
+      // const handleLogout = async () => {
+      //   try {
+      //     const response = await fetch(`${API_SERVER}/auth/logout`,
+      //     {
+      //       method: 'POST',
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //       body: JSON.stringify({email: emailUserLogged, token: tokenUserLogged}), 
+      //     })
+      //     const data = await response.json()
+      //     console.log(data)
+      //     if(response.status === 200) {
+      //       logout()
+      //       localStorage.removeItem('token')
+      //       localStorage.removeItem('user')
+      //     } else{
+      //       alert(data.message)
+      //     }
           
-        } catch (error) {
-          console.log(error)
-        }
-      }
+      //   } catch (error) {
+      //     console.log(error)
+      //   }
+      // }
 
     return (
         <Box component='header' sx={{display: 'flex', alignItems: 'center'}}>
@@ -90,10 +90,14 @@ const Header = () => {
             
             <MainMenu />
 
-            <div style={{margin: '0 0 0 20px', color: '#FFF' }}>
+            <div style={{ margin: '0 0 0 20px', color: '#FFF' }}>
                 {isLogged ? (
-                    <img onClick={() => handleLogout()} style={styles.avatar} src={avatarUserLogged} alt={nameUserLogged} />
-                ) : (<button  onClick={() => setModalOpen(true)}>Logar</button>) }
+                    <Link to="/perfil">
+                        <img style={styles.avatar} src={avatarUserLogged} alt={nameUserLogged} />
+                    </Link>
+                ) : (
+                  <button onClick={() => setModalOpen(true)}>Logar</button>
+                )}
             </div>
             
             {modalOpen && 

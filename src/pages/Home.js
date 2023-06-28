@@ -5,8 +5,8 @@ import Header from '../components/Header'
 // import Content from '../components/Content'
 import Footer from '../components/Footer'
 import Carousel from '../components/Carousel'
-// import ImageSlider from '../components/ImageSlider'
-import Cards from '../components/Cards'
+import ImageSlider from '../components/ImageSlider'
+
 
 
 
@@ -15,8 +15,6 @@ const Home = () => {
     <>
       <Header />
 
-      {/* <ImageSlider /> */}
-      
       <Carousel />
 
       <Box sx={{
@@ -24,21 +22,11 @@ const Home = () => {
       }}>
        
         {/* <Content /> */}
+
       </Box>
 
-      <Box style={{ display: 'flex' }}>
-        <Cards
-          imageSrc="caminho_da_imagem"
-          title="Título do Card"
-          date="Data"
-        />
+      <ImageSlider />
 
-        <Cards 
-          imageSrc="caminho_da_imagem"
-          title="Título do Card"
-          date="Data"
-        />
-      </Box>
       <Footer />
     </>
   )

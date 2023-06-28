@@ -1,6 +1,10 @@
 header {
-    background: #FFF;
-    padding: 20px;
+  background: #FFF;
+  padding: 20px;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; */
 }
 
 header h1{

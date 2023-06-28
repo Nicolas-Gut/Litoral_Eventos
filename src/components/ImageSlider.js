@@ -3,11 +3,23 @@ import {useState, useEffect, useRef} from 'react'
 import './ImageSlider.css'
 import { motion } from 'framer-motion'
 
-import I1 from './assets/img/I5.jpg';
-import I2 from './assets/img/I1.jpg';
-import I3 from './assets/img/I5.jpg';
+import I1 from './assets/img/teto.jpg';
+import I2 from './assets/img/tiago.jpg';
+import I3 from './assets/img/pedro.jpg';
+import I4 from './assets/img/lexa.jpg';
+import I5 from './assets/img/luan.jpg';
+import I6 from './assets/img/iza.jpg';
+import I7 from './assets/img/AnaVitoria.jpg';
 
-const images = [I1, I2, I3, I2, I3]
+const images = [
+  { image: I1, text: "Teto" },
+  { image: I2, text: "Tiago Iorc" },
+  { image: I3, text: "Pedro Sampaio" },
+  { image: I4, text: "lexa" },
+  { image: I5, text: "Luan Santana" },
+  { image: I6, text: "Iza" },
+  { image: I7, text: "Ana Vitoria" },
+];
 
 function ImageSlider() {
   const carousel = useRef();
@@ -30,10 +42,10 @@ function ImageSlider() {
         transition={{ duration: 0.8}}
         >
 
-          {images.map(image =>(
-            <motion.div className='item' key={image}>
-              <img src={image} alt="Texto alt" />
-              <p style={{display: 'flex', alignItems: 'center'}}>teste</p>
+          {images.map((item, index) =>(
+            <motion.div className='item' key={index}>
+              <img src={item.image} alt="Texto alt" />
+              <p>{item.text}</p>
             </motion.div> 
           ))}
 

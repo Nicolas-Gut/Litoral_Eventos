@@ -2,7 +2,7 @@
   width: 90%;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: -180px;
+  margin-top: -280px;
   margin-bottom: -220px;
   min-height: 100vh;
   display: flex;
@@ -14,17 +14,26 @@
   display: flex;
 }
 
-.item{
+.item {
   min-height: 200px;
-  min-width: 120px;
-  padding: 35px;
+  min-width: 180px; /* Aumentamos a largura para melhor acomodar o conteúdo do card */
+  padding: 15px; /* Reduzimos o padding para melhor ajuste dentro do card */
+  background-color: #fff; /* Adicionamos um fundo branco ao card */
+  border-radius: 10px; /* Adicionamos bordas arredondadas ao card */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adicionamos uma sombra para dar destaque */
+  margin: 10px; /* Adicionamos margem entre os cards */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Alinhamos o conteúdo verticalmente no centro */
 }
 
-.item img{
+.item img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   pointer-events: none;
+  margin-bottom: 10px; /* Adicionamos um espaçamento entre a imagem e o texto */
 }
 
 .carousel{

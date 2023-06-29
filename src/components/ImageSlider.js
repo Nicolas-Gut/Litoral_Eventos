@@ -12,13 +12,13 @@ import I6 from './assets/img/iza.jpg';
 import I7 from './assets/img/AnaVitoria.jpg';
 
 const images = [
-  { image: I1, text: "Teto" },
-  { image: I2, text: "Tiago Iorc" },
-  { image: I3, text: "Pedro Sampaio" },
-  { image: I4, text: "lexa" },
-  { image: I5, text: "Luan Santana" },
-  { image: I6, text: "Iza" },
-  { image: I7, text: "Ana Vitoria" },
+  { image: I1, text: "Teto", additionalText: "Data: 16/07/2023" },
+  { image: I2, text: "Tiago Iorc", additionalText: "Data: 16/02/2024"},
+  { image: I3, text: "Pedro Sampaio", additionalText: "Data: 30/11/2023" },
+  { image: I4, text: "lexa", additionalText: "Data: 16/10/2023" },
+  { image: I5, text: "Luan Santana", additionalText: "Data: 11/07/2023" },
+  { image: I6, text: "Iza", additionalText: "Data: 18/08/2023" },
+  { image: I7, text: "Ana Vitoria", additionalText: "Data: 20/09/2023"},
 ];
 
 function ImageSlider() {
@@ -32,7 +32,9 @@ function ImageSlider() {
 
 
   return (    
+    
     <div className='imageSlider'>
+      
       <motion.div ref={carousel} className='carousel' whileTap={{ cursor: "grabbing" }}>
         <motion.div className='inner'
         drag="x"
@@ -41,13 +43,16 @@ function ImageSlider() {
         animate= {{ x: 0}}
         transition={{ duration: 0.8}}
         >
+          
+          {/* <div className="shows-text"><h1>Shows</h1></div> */}
 
-          {images.map((item, index) =>(
-            <motion.div className='item' key={index}>
-              <img src={item.image} alt="Texto alt" />
-              <p>{item.text}</p>
-            </motion.div> 
-          ))}
+        {images.map((item, index) => (
+          <motion.div className='item' key={index}>
+            <img src={item.image} alt="Texto alt" />
+            <p>{item.text}</p>
+            {item.additionalText && <p>{item.additionalText}</p>}
+          </motion.div>
+        ))}
 
         </motion.div>
       </motion.div>

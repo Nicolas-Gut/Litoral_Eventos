@@ -1,42 +1,43 @@
-.imageSlider{
-  width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
-  margin-top: -280px;
-  margin-bottom: -220px;
-  min-height: 100vh;
+.imageSlider {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.inner{
+.carousel {
+  width: 65%; /* ou qualquer largura desejada */
+  height: 100%;
+  overflow: hidden;
+  overflow: hidden;
+
+  /*  border: 1px solid #ccc; 
+  border-radius: 8px; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  */
+} 
+
+.inner {
   display: flex;
+  width: fit-content; /* para que o tamanho do conteúdo seja apenas o necessário */
+  padding: 0; /* remova o espaçamento entre os itens */
 }
 
 .item {
-  min-height: 200px;
-  min-width: 180px; /* Aumentamos a largura para melhor acomodar o conteúdo do card */
-  padding: 15px; /* Reduzimos o padding para melhor ajuste dentro do card */
-  background-color: #fff; /* Adicionamos um fundo branco ao card */
-  border-radius: 10px; /* Adicionamos bordas arredondadas ao card */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Adicionamos uma sombra para dar destaque */
-  margin: 10px; /* Adicionamos margem entre os cards */
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column; /* Alinhamos o conteúdo verticalmente no centro */
+  margin-right: 10px; /* adicione um espaçamento entre as imagens */
+}
+
+.item:last-child {
+  margin-right: 0; /* remova o espaçamento da última imagem */
 }
 
 .item img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  pointer-events: none;
-  margin-bottom: 10px; /* Adicionamos um espaçamento entre a imagem e o texto */
-}
-
-.carousel{
-  cursor: grab;
-  overflow: hidden;
+  /* width: 100%; /* assegure-se de que a imagem ocupe todo o espaço disponível */
+  /*height: auto; mantenha a proporção da imagem */
+  width: 205px; /* Defina a largura desejada */
+  height: 205px; /* Defina a altura desejada */
+  object-fit: cover;
 }
